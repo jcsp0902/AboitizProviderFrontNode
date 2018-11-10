@@ -1,0 +1,54 @@
+.notification-center{
+    height: 450px;
+    border: 1px solid #1890ff;
+    border-radius: 10px;
+    padding: 20px;
+}
+.notification-card {
+    height: 50px;
+    &.pending {
+        border: 1px solid yellow;
+        border-radius: 10px;
+    }
+    &.rejected {
+        border: 1px solid red;
+        border-radius: 10px;
+    }
+    &.approved,
+    &.finised,
+    &.deployment {
+        border: 1px solid green;
+        border-radius: 10px;
+    }
+    .pending {
+        background: yellow !important;
+    }
+    .approved,
+    .finised,
+    .deployment {
+        background: green !important;
+    }
+    .rejected {
+       background: red !important;
+    }
+    span{
+        font-size: 18px;
+    }
+    .ant-btn[disabled] {
+        color:white;
+        margin-top: -1px;
+        margin-left: -1px;
+        font-size: 20px;
+        margin-right: 20px;
+        font-weight: 1000;
+        height: 50px;
+        width: 50px;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .details-btn {
+        float: right;
+        margin: 10px;
+        width: 150px;
+    }
+}

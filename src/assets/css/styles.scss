@@ -1,0 +1,23 @@
+/*
+ Partials
+*/
+@import './partials/variables';
+@import './partials/global';
+@import './partials/helpers';
+
+/*
+  Modules - pages, parnent element
+*/
+@import './modules/Home';
+@import './modules/Home1';
+@import './modules/Dashboard';
+@import './modules/Application';
+@import './modules/NotificationCenter';
+
+
+/*
+  components - custome UI / or usable style
+*/
+@import './components/fullWidthLoading';
+@import './components/customerCard';
+@import './components/packageCard';

@@ -1,0 +1,127 @@
+.package-card{
+  text-align: left;
+  overflow: auto;
+  display: inline-block;
+  margin: 10px;
+  border: 2px solid #857373;
+  border-radius: 10px;
+  max-width: 300px;
+  min-height: 300px;
+  box-shadow: 2px 2px #B9A7A7;
+  .package-header {
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    .pending{
+      border-radius: inherit;
+      background-color: #9e9588;
+      border-bottom: 1px solid #857373;
+      text-align: right; 
+      color: #fff;
+    }
+    .bidding{
+      border-radius: inherit;
+      background-color: red;
+      border-bottom: 1px solid #857373;
+      text-align: right; 
+      color: #fff;
+    }
+    .deployment{
+      border-radius: inherit;
+      background-color: blue;
+      border-bottom: 1px solid #857373;
+      text-align: right; 
+      color: #fff;
+    }
+    .accomplished{
+      border-radius: inherit;
+      background-color: green;
+      border-bottom: 1px solid #857373;
+      text-align: right; 
+      color: #fff;
+    }
+    .cancelled{
+      border-radius: inherit;
+      background-color: #9e9588;
+      border-bottom: 1px solid #857373;
+      text-align: right; 
+      color: #fff;
+    }
+    .approve{
+      border-radius: inherit;
+      background-color: #ff9400;
+      border-bottom: 1px solid #857373;
+      text-align: right; 
+      color: #fff;
+    }
+    .status {
+      margin-right: 10px;
+      text-align: right; 
+      font-size: 18px;
+    }
+  }
+  
+}
+
+.package-body {
+  margin: 15px;
+  .title{
+    font-weight: bolder;
+  }
+  .location {
+    .title {
+      font-weight: bolder;
+    }
+  }
+  .price {
+    .title {
+      font-weight: bolder;
+    }
+  }
+  .service{
+    .title {
+      font-weight: bolder;
+    }
+  }
+  .details {
+    .items{
+    max-height: 84px;
+    overflow: auto; 
+    }
+    .view-more-action {
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 12px;
+      cursor: pointer;
+      color: #1890ff;
+      &:hover {
+        color: #326390;
+      }
+    }
+  }
+  
+}
+
+.package-footer{
+  .action-body{
+    margin: 10px;
+    .action {
+      margin-right: 5px;
+    }
+    // .action-edit {
+    //   font-weight: bolder;
+    //   outline: none;
+    //   border-radius: 7px;
+    //   min-height: 25px;
+    //   min-width: 100px;
+    //   border-color: #1890ff; 
+    //   background: #1890ff;
+    //   color: #fff;
+    //   cursor: pointer;
+    //   &:hover {
+    //     color: #1890ff;
+    //     background: #fff;
+    //   }
+    // }
+  }
+}

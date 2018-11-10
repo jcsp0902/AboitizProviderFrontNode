@@ -1,0 +1,201 @@
+.application-section {
+    margin-top: 25px;
+    .ant-tabs-bar {
+        margin: 0;
+       
+    }
+    .allin {
+        text-align: center;
+        height: 450px;
+        border: 1px solid #1890ff;
+        padding: 20px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        h4 {
+          font-size: 20px;
+        }
+        span {
+            font-size: 16px; 
+        }
+        .next-btn {
+            text-align: center
+        }
+        button {
+            width: 150px;
+            height: 50px;
+            margin-left: 20px;
+        }
+    }
+
+    .repair {
+      text-align: center;
+      height: 450px;
+      border: 1px solid #1890ff;
+      padding: 20px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      h4 {
+        font-size: 20px;
+      }
+      span {
+          font-size: 16px; 
+      }
+      .next-btn {
+          text-align: center
+      }
+      button {
+          width: 150px;
+          height: 50px;
+          margin-left: 20px;
+      }
+    }
+    .ant-tabs-nav .ant-tabs-tab-active {
+        background: #1890ff;
+        color: #fff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .ant-tabs-nav .ant-tabs-tab {
+        padding: 12px 50px;
+        margin: 0;
+    }
+    .card {
+        display: inline-block;
+        &.a {
+            .package-application-card{
+                border: 1px solid #1890ff;
+                border-radius: 10px;
+                max-width: 300px;
+                min-height: 300px;
+                box-shadow: 2px 2px #B9A7A7;
+                .package-header {
+                  border-top-right-radius: 10px;
+                  border-top-left-radius: 10px;
+                  .package-name{
+                    border-radius: inherit;
+                    // border-top-right-radius: 10px;
+                    // border-top-left-radius: 10px;
+                    background-color: #1890ff;
+                    border-bottom: 1px solid #1890ff;
+                    text-align: left; 
+                    color: white;
+                    padding-left: 20px;
+                  }
+                  .status {
+                    margin-right: 10px;
+                    text-align: right; 
+                    font-size: 18px;
+                  }
+                }
+                
+              }
+        }
+    }
+}
+.total {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  font-size: 30px;
+}
+.defaultAddress.address2 {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.defaultAddress {
+  overflow: auto;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #857373;
+  border-radius: 10px;
+  width: 320px;
+  min-height: 300px;
+  box-shadow: 2px 2px #B9A7A7;
+  .anticon-plus-circle {
+    font-size: 150px;
+    margin-top: 80px;
+    color: #1890ff;
+  }
+  .address-header {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #1890ff;
+    .address {
+      border-radius: inherit;
+      // border-top-right-radius: 10px;
+      // border-top-left-radius: 10px;
+      // background-color: #ff9400;
+      border-bottom: 1px solid #857373;
+      text-align: left; 
+      color: white;
+      font-weight: 900;
+      padding-left: 20px;
+    }
+  }
+}
+.package-application-card{
+    overflow: auto;
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #857373;
+    border-radius: 10px;
+    width: 320px;
+    min-height: 300px;
+    box-shadow: 2px 2px #B9A7A7;
+    .package-header {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      background: #1890ff;
+      .package-name{
+        border-radius: inherit;
+        // border-top-right-radius: 10px;
+        // border-top-left-radius: 10px;
+        // background-color: #ff9400;
+        border-bottom: 1px solid #857373;
+        text-align: left; 
+        color: white;
+        font-weight: 900;
+        padding-left: 20px;
+      }
+      .status {
+        margin-right: 10px;
+        text-align: right; 
+        font-size: 18px;
+      }
+    }
+    
+  }
+  
+  .package-application-body {
+    margin: 15px;
+    span{
+      font-weight: bolder;
+    }
+    .title{
+      font-weight: bolder;
+    }
+    .location {
+      .title {
+        font-weight: bolder;
+      }
+    }
+    .price {
+      .title {
+        font-weight: bolder;
+      }
+    }
+    .service{
+      .title {
+        font-weight: bolder;
+      }
+    }
+    .details {
+      .items{
+      max-height: 84px;
+      overflow: auto; 
+      }
+    }
+  }

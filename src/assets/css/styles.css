@@ -1,0 +1,468 @@
+/*
+ Partials
+*/
+.content-section {
+  min-height: calc(100vh - 130px);
+  padding: 20px 5%; }
+
+.Header-section {
+  background: #1890ff;
+  color: #19324b;
+  border-bottom: solid 1px #19324b;
+  height: 35px;
+  font-size: 20px;
+  padding-left: 20px; }
+  .Header-section .anticon-notification {
+    color: black; }
+  .Header-section .apply-button {
+    padding-left: 100px; }
+  .Header-section .ant-btn {
+    border: none;
+    font-weight: 700;
+    background: none;
+    position: absolute;
+    line-height: 0 !important;
+    margin-top: 2px; }
+    .Header-section .ant-btn .anticon.anticon-home,
+    .Header-section .ant-btn .anticon.anticon-form {
+      padding: 0px; }
+    .Header-section .ant-btn:hover, .Header-section .ant-btn:active, .Header-section .ant-btn:focus {
+      border: none;
+      background: none;
+      color: #19324b; }
+  .Header-section .services {
+    margin-left: 100px; }
+  .Header-section .search {
+    display: inline-block;
+    width: 300px;
+    margin-top: 5px;
+    position: absolute; }
+  .Header-section h1,
+  .Header-section h5 {
+    display: inline-block;
+    padding-right: 30px; }
+  .Header-section .right-panel {
+    display: inline-block;
+    float: right !important; }
+  .Header-section .anticon {
+    padding-right: 20px;
+    cursor: pointer; }
+
+.spacer {
+  margin-bottom: 10px; }
+
+.spacer-sm {
+  margin-bottom: 20px; }
+
+.spacer-md {
+  margin-bottom: 30px; }
+
+.btn-default {
+  background: #0a1612 !important;
+  border-radius: 5px !important;
+  color: #fff !important; }
+
+.breaker {
+  border-bottom: 1px solid #0a1612; }
+
+/*
+  Modules - pages, parnent element
+*/
+.Home-section {
+  color: #F0AD4E; }
+
+.login-section {
+  text-align: center; }
+  .login-section h1 {
+    margin: 0;
+    padding: 10px;
+    background: #f7ce3e;
+    font-size: 40px;
+    border-radius: 10px 10px 0px 0px; }
+  .login-section .form-section {
+    background-color: #fff;
+    width: 400px;
+    height: auto;
+    box-shadow: 0 0 40px 4px #111118;
+    border-radius: 10px;
+    margin: 0 auto; }
+    .login-section .form-section .login {
+      padding: 45px 40px; }
+    .login-section .form-section .email-login,
+    .login-section .form-section .password-login {
+      margin-bottom: 30px; }
+    .login-section .form-section .ant-btn {
+      font-size: 25px;
+      height: 40px;
+      width: 175px; }
+  .login-section .signup {
+    padding: 45px 40px; }
+  .login-section .ant-btn,
+  .login-section .ant-input,
+  .login-section .ant-radio-group {
+    margin-bottom: 30px; }
+
+.home-section {
+  text-align: center; }
+  .home-section .title-home {
+    font-size: 24px;
+    font-weight: bolder; }
+
+.dashboard-section .ant-layout {
+  height: 100vh;
+  text-align: center;
+  padding-top: 20px;
+  background: #fff !important; }
+
+.dashboard-section .ant-layout-sider-dark {
+  background: #fff !important;
+  border-right: 1px solid black; }
+
+.dashboard-section .ant-layout-sider {
+  max-width: 500px !important;
+  min-width: 500px !important;
+  width: 500px !important;
+  padding: 20px; }
+  .dashboard-section .ant-layout-sider .ant-btn {
+    font-size: 24px;
+    height: 50px;
+    margin-bottom: 30px !important; }
+
+.dashboard-section .ant-layout-content {
+  padding: 20px;
+  text-align: left; }
+  .dashboard-section .ant-layout-content h1 {
+    font-size: 28px; }
+  .dashboard-section .ant-layout-content .customer-card {
+    padding: 20px; }
+  .dashboard-section .ant-layout-content span {
+    display: block; }
+
+.dashboard-section .user-section {
+  background: #f7ce3e;
+  height: 300px !important;
+  border-radius: 20px;
+  padding: 20px; }
+  .dashboard-section .user-section .user-details {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 20px; }
+    .dashboard-section .user-section .user-details h3 {
+      margin: 0; }
+  .dashboard-section .user-section .user-address {
+    text-align: left;
+    font-size: 18px; }
+    .dashboard-section .user-section .user-address h3 {
+      margin: 0; }
+  .dashboard-section .user-section .user-info {
+    margin-bottom: 30px; }
+  .dashboard-section .user-section img {
+    float: left;
+    background: white;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    max-width: 80px;
+    max-height: 80px; }
+  .dashboard-section .user-section h1 {
+    font-size: 30px;
+    padding: 0;
+    margin: 0; }
+  .dashboard-section .user-section h5 {
+    font-size: 20px; }
+
+.application-section {
+  margin-top: 25px; }
+  .application-section .ant-tabs-bar {
+    margin: 0; }
+  .application-section .allin {
+    text-align: center;
+    height: 450px;
+    border: 1px solid #1890ff;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .application-section .allin h4 {
+      font-size: 20px; }
+    .application-section .allin span {
+      font-size: 16px; }
+    .application-section .allin .next-btn {
+      text-align: center; }
+    .application-section .allin button {
+      width: 150px;
+      height: 50px;
+      margin-left: 20px; }
+  .application-section .repair {
+    text-align: center;
+    height: 450px;
+    border: 1px solid #1890ff;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .application-section .repair h4 {
+      font-size: 20px; }
+    .application-section .repair span {
+      font-size: 16px; }
+    .application-section .repair .next-btn {
+      text-align: center; }
+    .application-section .repair button {
+      width: 150px;
+      height: 50px;
+      margin-left: 20px; }
+  .application-section .ant-tabs-nav .ant-tabs-tab-active {
+    background: #1890ff;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+  .application-section .ant-tabs-nav .ant-tabs-tab {
+    padding: 12px 50px;
+    margin: 0; }
+  .application-section .card {
+    display: inline-block; }
+    .application-section .card.a .package-application-card {
+      border: 1px solid #1890ff;
+      border-radius: 10px;
+      max-width: 300px;
+      min-height: 300px;
+      box-shadow: 2px 2px #B9A7A7; }
+      .application-section .card.a .package-application-card .package-header {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px; }
+        .application-section .card.a .package-application-card .package-header .package-name {
+          border-radius: inherit;
+          background-color: #1890ff;
+          border-bottom: 1px solid #1890ff;
+          text-align: left;
+          color: white;
+          padding-left: 20px; }
+        .application-section .card.a .package-application-card .package-header .status {
+          margin-right: 10px;
+          text-align: right;
+          font-size: 18px; }
+
+.total {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  font-size: 30px; }
+
+.defaultAddress.address2 {
+  max-height: 300px;
+  overflow-y: auto; }
+
+.defaultAddress {
+  overflow: auto;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #857373;
+  border-radius: 10px;
+  width: 320px;
+  min-height: 300px;
+  box-shadow: 2px 2px #B9A7A7; }
+  .defaultAddress .anticon-plus-circle {
+    font-size: 150px;
+    margin-top: 80px;
+    color: #1890ff; }
+  .defaultAddress .address-header {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #1890ff; }
+    .defaultAddress .address-header .address {
+      border-radius: inherit;
+      border-bottom: 1px solid #857373;
+      text-align: left;
+      color: white;
+      font-weight: 900;
+      padding-left: 20px; }
+
+.package-application-card {
+  overflow: auto;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #857373;
+  border-radius: 10px;
+  width: 320px;
+  min-height: 300px;
+  box-shadow: 2px 2px #B9A7A7; }
+  .package-application-card .package-header {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #1890ff; }
+    .package-application-card .package-header .package-name {
+      border-radius: inherit;
+      border-bottom: 1px solid #857373;
+      text-align: left;
+      color: white;
+      font-weight: 900;
+      padding-left: 20px; }
+    .package-application-card .package-header .status {
+      margin-right: 10px;
+      text-align: right;
+      font-size: 18px; }
+
+.package-application-body {
+  margin: 15px; }
+  .package-application-body span {
+    font-weight: bolder; }
+  .package-application-body .title {
+    font-weight: bolder; }
+  .package-application-body .location .title {
+    font-weight: bolder; }
+  .package-application-body .price .title {
+    font-weight: bolder; }
+  .package-application-body .service .title {
+    font-weight: bolder; }
+  .package-application-body .details .items {
+    max-height: 84px;
+    overflow: auto; }
+
+.notification-center {
+  height: 450px;
+  border: 1px solid #1890ff;
+  border-radius: 10px;
+  padding: 20px; }
+
+.notification-card {
+  height: 50px; }
+  .notification-card.pending {
+    border: 1px solid yellow;
+    border-radius: 10px; }
+  .notification-card.rejected {
+    border: 1px solid red;
+    border-radius: 10px; }
+  .notification-card.approved, .notification-card.finised, .notification-card.deployment {
+    border: 1px solid green;
+    border-radius: 10px; }
+  .notification-card .pending {
+    background: yellow !important; }
+  .notification-card .approved,
+  .notification-card .finised,
+  .notification-card .deployment {
+    background: green !important; }
+  .notification-card .rejected {
+    background: red !important; }
+  .notification-card span {
+    font-size: 18px; }
+  .notification-card .ant-btn[disabled] {
+    color: white;
+    margin-top: -1px;
+    margin-left: -1px;
+    font-size: 20px;
+    margin-right: 20px;
+    font-weight: 1000;
+    height: 50px;
+    width: 50px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px; }
+  .notification-card .details-btn {
+    float: right;
+    margin: 10px;
+    width: 150px; }
+
+/*
+  components - custome UI / or usable style
+*/
+.FullWidthLoading-section {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  color: #F0AD4E; }
+
+.customer-card {
+  background: #c5c1c0;
+  border-radius: 20px;
+  color: #1a2930; }
+  .customer-card div {
+    text-align: right; }
+
+.package-card {
+  text-align: left;
+  overflow: auto;
+  display: inline-block;
+  margin: 10px;
+  border: 2px solid #857373;
+  border-radius: 10px;
+  max-width: 300px;
+  min-height: 300px;
+  box-shadow: 2px 2px #B9A7A7; }
+  .package-card .package-header {
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px; }
+    .package-card .package-header .pending {
+      border-radius: inherit;
+      background-color: #9e9588;
+      border-bottom: 1px solid #857373;
+      text-align: right;
+      color: #fff; }
+    .package-card .package-header .bidding {
+      border-radius: inherit;
+      background-color: red;
+      border-bottom: 1px solid #857373;
+      text-align: right;
+      color: #fff; }
+    .package-card .package-header .deployment {
+      border-radius: inherit;
+      background-color: blue;
+      border-bottom: 1px solid #857373;
+      text-align: right;
+      color: #fff; }
+    .package-card .package-header .accomplished {
+      border-radius: inherit;
+      background-color: green;
+      border-bottom: 1px solid #857373;
+      text-align: right;
+      color: #fff; }
+    .package-card .package-header .cancelled {
+      border-radius: inherit;
+      background-color: #9e9588;
+      border-bottom: 1px solid #857373;
+      text-align: right;
+      color: #fff; }
+    .package-card .package-header .approve {
+      border-radius: inherit;
+      background-color: #ff9400;
+      border-bottom: 1px solid #857373;
+      text-align: right;
+      color: #fff; }
+    .package-card .package-header .status {
+      margin-right: 10px;
+      text-align: right;
+      font-size: 18px; }
+
+.package-body {
+  margin: 15px; }
+  .package-body .title {
+    font-weight: bolder; }
+  .package-body .location .title {
+    font-weight: bolder; }
+  .package-body .price .title {
+    font-weight: bolder; }
+  .package-body .service .title {
+    font-weight: bolder; }
+  .package-body .details .items {
+    max-height: 84px;
+    overflow: auto; }
+  .package-body .details .view-more-action {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    cursor: pointer;
+    color: #1890ff; }
+    .package-body .details .view-more-action:hover {
+      color: #326390; }
+
+.package-footer .action-body {
+  margin: 10px; }
+  .package-footer .action-body .action {
+    margin-right: 5px; }

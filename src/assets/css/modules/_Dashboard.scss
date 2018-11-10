@@ -1,0 +1,80 @@
+.dashboard-section {
+    .ant-layout {
+    height: 100vh;
+    text-align: center;
+    padding-top: 20px;
+    background: #fff !important;
+    }
+    .ant-layout-sider-dark {
+        background: #fff !important;
+        border-right: 1px solid black;
+    }
+    .ant-layout-sider {
+    max-width: 500px !important;
+    min-width: 500px !important;
+    width: 500px !important;
+    padding: 20px;
+    .ant-btn {
+        font-size: 24px;
+        height: 50px;
+        margin-bottom: 30px !important;
+        }
+    }
+    .ant-layout-content {
+        padding: 20px;
+        text-align: left;
+        h1 {
+            font-size: 28px;
+            // float: left;
+        }
+        .customer-card {
+            padding: 20px;
+        }
+        span {
+            // padding: 20px;
+            display: block;
+        }
+    }
+    .user-section {
+        .user-details {
+            text-align: left;
+            font-size: 18px;
+            margin-bottom: 20px;
+            h3 {
+                margin: 0;
+            }
+        }   
+        .user-address {
+            text-align: left;
+            font-size: 18px;
+            h3 {
+                margin: 0;
+            }
+        }
+        .user-info {
+            margin-bottom: 30px;
+        }
+        background: #f7ce3e;
+        height: 300px !important;
+        border-radius: 20px;
+        padding: 20px;
+        img {
+            float: left;
+            background: white;
+            border-radius: 5px;
+            width: 100px;
+            height: 100px;
+            max-width: 80px;
+            max-height: 80px;
+        }
+        h1 {
+            font-size: 30px;
+            padding: 0;
+            margin: 0;
+        }
+        h5 {
+            font-size: 20px;
+        }
+
+    }
+}
