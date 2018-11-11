@@ -120,16 +120,19 @@ export const dataSource = [
     ],
     bidders: [
       {
+        bidId: 1,
         rank: 1,
         orgName: 'Nicho Association',
         bidAmount: '10000',
       },
       {
+        bidId: 2,
         rank: 2,
         orgName: 'Maridin Association',
         bidAmount: '1200',
       },
       {
+        bidId: 3,
         rank: 3,
         orgName: 'Carlo Association',
         bidAmount: '14000',
@@ -137,7 +140,7 @@ export const dataSource = [
       {
         rank: 4,
         orgName: 'Victor Association',
-        bidAmount: '10000',
+        bidAmount: '15000',
       },
     ]
   },

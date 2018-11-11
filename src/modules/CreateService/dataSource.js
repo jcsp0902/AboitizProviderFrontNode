@@ -1,5 +1,6 @@
 export const dataSource = [
   {
+    applicationId: 1,
     packageName: "A",
     packagePrice: 10000,
     service: "Installation",
@@ -13,6 +14,7 @@ export const dataSource = [
     ]
   },
   {
+    applicationId: 2,
     packageName: "B",
     packagePrice: 20000,
     service: "Installation",
@@ -26,6 +28,7 @@ export const dataSource = [
     ]
   },
   {
+    applicationId: 3,
     packageName: "C",
     packagePrice: 30000,
     service: "Installation",

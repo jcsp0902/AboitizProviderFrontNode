@@ -56,8 +56,25 @@ class Home extends Component {
     })
   }
 
-  handleSave = id => {
+  handleSave = item => {
+    console.log('item: ', item)
+    if(item.status !== "bidding") {
     this.props.history.push("/service-application")    
+  }
+    const dataSource = this.state.dataSource;
+    const newDatas = dataSource.map(data => {
+      if(item.id === data.applicationId) {
+        data.status = "For Deployment";
+        const findData = data.bidders.find(bidder => 
+          bidder.bidId === item.bidId
+        ) 
+        data.bidderAssigned = findData.orgName;
+      }
+      return data;
+    })
+    this.setState({
+      dataSource: newDatas,
+    })
   }
 
   handleCancel = id => {

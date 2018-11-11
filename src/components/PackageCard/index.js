@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import isEqual from 'lodash/isEqual'
 import Button from 'antd/lib/button';
+import Radio from 'antd/lib/radio';
+
 
 const propTypes = {
   handleSave: PropTypes.func,
@@ -14,6 +16,7 @@ const defaultProps = {
   handleCancel: () => {},
 }
 
+const RadioGroup = Radio.Group;
 
 class PackageCard extends Component {
   state = {
@@ -29,6 +32,7 @@ class PackageCard extends Component {
     },
     isViewMore: false,
     numToShow: 4,
+    value: '',
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -54,12 +58,32 @@ class PackageCard extends Component {
     this.props.onCancel(id);
   }
 
-  handleSave = () => {
+  handleSave = bidding => {
     const id = this.state.dataSource.applicationId;
+    let stats = "";
+    let bidId = "";
+    if(bidding === 'bidding'){
+      stats = bidding;
+      bidId = this.state.value;
+    }
+    console.log(bidding)
     this.setState({
       status: 0,
+    }, () => {
+      this.props.onSave({
+        id,
+        status: stats,
+        bidId,
+      });
     })
-    this.props.onSave(id);
+    
+  }
+
+  radioChange = e => {
+    console.log('radio: ', e.target.value)
+    this.setState({
+      value: e.target.value,
+    })
   }
 
   handleEdit = () => {
@@ -147,13 +171,15 @@ class PackageCard extends Component {
           {this.props.dataSource.status === 'Bidding' && 
           <div className="bidding-section">
             <span className="title bidders">Bidders Rank: </span>
+          <RadioGroup onChange={this.radioChange} value={this.state.value}>
           {this.props.dataSource.bidders.map(items => (
-            <div>
+            <Radio value={items.bidId}>
             <span>{items.rank}. </span>
             <span>{items.orgName}</span>
             <span> {items.bidAmount}</span>
-            </div>
+            </Radio>
           ))}
+          </RadioGroup>
         </div> 
         }
         </div>
@@ -182,6 +208,20 @@ class PackageCard extends Component {
         </div> 
         }
         
+        {this.props.dataSource.status === 'Bidding' &&
+        <div className="action-body">
+          <span className="action">
+            <Button
+              type="primary"
+              className="action-edit"
+              onClick={() => this.handleSave("bidding")}
+            >
+              Award
+            </Button>
+          </span>
+        </div> 
+        }
+
           {this.props.dataSource.status === 'For Deployment' && 
           <div className="deployment-section">
             <div><span className="title">Assigned to: </span>
