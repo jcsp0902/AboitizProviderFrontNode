@@ -16,7 +16,7 @@ class Header extends Component {
         </Link>
         <Link className="apply-button" to={`/service-application`} >
           <Button icon="form">
-          APPLY SERVICES
+          SERVICES
           </Button>
         </Link>
         <div className="right-panel">
