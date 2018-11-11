@@ -54,7 +54,7 @@ class NotificationCard extends Component {
       rateModal: false,
     });
   };
-  handleRateancel = (e) => {
+  handleRateCancel = (e) => {
     console.log(e);
     this.setState({
       rateModal: false,
@@ -66,13 +66,13 @@ class NotificationCard extends Component {
     <section className={`notification-card ${this.props.dataSource.status}`}>
         {this.props.dataSource.status === 'pending' &&
         <div>
-          <Button className={this.props.dataSource.status} disabled icon="loading-3-quarters"/> <span>The request for {this.props.dataSource.applicationNo} service is on process</span>
+          <Button className={this.props.dataSource.status} disabled icon="loading-3-quarters"/> <span>{this.props.dataSource.customerName} apply for auction {this.props.dataSource.applicationNo}</span>
           <Button className="details-btn" onClick={this.showModal}> View Details </Button>
         </div>
         }
         {this.props.dataSource.status === 'approved' &&
         <div>
-          <Button className={this.props.dataSource.status} disabled icon="check"/> <span>Your application for {this.props.dataSource.applicationNo} has been approved</span>
+          <Button className={this.props.dataSource.status} disabled icon="check"/> <span>{this.props.dataSource.association} won the bidding for {this.props.dataSource.applicationNo}</span>
           <Button className="details-btn" onClick={this.showModal}> View Details </Button>
         </div>
         }
@@ -84,14 +84,14 @@ class NotificationCard extends Component {
         }
         {this.props.dataSource.status === 'rejected' &&
         <div>
-          <Button className={this.props.dataSource.status} disabled icon="close-circle"/> <span>Your application for {this.props.dataSource.applicationNo} has been rejected</span>
+          <Button className={this.props.dataSource.status} disabled icon="close-circle"/> <span>{this.props.dataSource.customerName} cancel the {this.props.dataSource.applicationNo} has been rejected</span>
           <Button className="details-btn" onClick={this.showModal}> View Details </Button>
         </div>
         }
         {this.props.dataSource.status === 'finised' &&
         <div>
-          <Button className={this.props.dataSource.status} disabled icon="check-circle"/> <span>Your service for {this.props.dataSource.applicationNo} has been done</span>
-          <Button className="details-btn" onClick={this.showRateModal}> Rate </Button>
+          <Button className={this.props.dataSource.status} disabled icon="check-circle"/> <span>The auction for {this.props.dataSource.applicationNo} has been accomplished.</span>
+          <Button className="details-btn" onClick={this.showModal}> View Details </Button>
         </div>
         }
         <Modal
@@ -100,17 +100,41 @@ class NotificationCard extends Component {
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
+          {this.props.dataSource.statut !== 'rejected' || 'pending' ? 
+          <div>
           <h3>Application No. {this.props.dataSource.applicationNo}</h3>
+          <h4>Customer Name. {this.props.dataSource.customerName}</h4>
           <h5>Package Name: {this.props.dataSource.packageName}</h5>
           <h5>Location: {this.props.dataSource.location}</h5>
           <h5>Package Price: {this.props.dataSource.packagePrice}</h5>
           <h5>Service: {this.props.dataSource.service}</h5>
-          <h5>Type: {this.props.dataSource.type}</h5>
+          <h5 className="spacer">Type: {this.props.dataSource.type}</h5>
+
           <div className="spacer"/>
           <h5>Item</h5>
           {this.props.dataSource.details.map(item => (
             <h5>{item}</h5>
           ))}
+          </div>
+          : <div>
+            <h3>Application No. {this.props.dataSource.applicationNo}</h3>
+          <h5>Package Name: {this.props.dataSource.packageName}</h5>
+          <h5>Location: {this.props.dataSource.location}</h5>
+          <h5>Package Price: {this.props.dataSource.packagePrice}</h5>
+          <h5>Bid Price: {this.props.dataSource.bidPrice}</h5>
+          <h5>Service: {this.props.dataSource.service}</h5>
+          <h5 className="spacer">Type: {this.props.dataSource.type}</h5>
+          {this.props.dataSource.accomplishDate != null &&
+          <h5 className="spacer">Date accomplished: {this.props.dataSource.accomplishDate}</h5>
+          }
+          <h5 className="spacer">Association: {this.props.dataSource.association}</h5>
+
+          <div className="spacer"/>
+          <h5>Item</h5>
+          {this.props.dataSource.details.map(item => (
+            <h5>{item}</h5>
+          ))}
+          </div> }
         </Modal>
         <Modal
           title="Service Details"
