@@ -113,7 +113,7 @@ class PackageCard extends Component {
         <div className="price">
         <span className="title">
           Package Price: {' '} 
-        </span> 
+        </span>
           Php {dataSource.packagePrice}
         </div>
         
@@ -133,7 +133,7 @@ class PackageCard extends Component {
         
         <div className="details">
           <span className="title">Package Details: </span> 
-          <div className="items">
+          <div className="items bid">
             {detailsRender}
           </div>
           {dataSource.details.length > 4 &&
@@ -144,6 +144,18 @@ class PackageCard extends Component {
             View {isViewMore ? 'Less' : 'More'}
           </button>
           }
+          {this.props.dataSource.status === 'Bidding' && 
+          <div className="bidding-section">
+            <span className="title bidders">Bidders Rank: </span>
+          {this.props.dataSource.bidders.map(items => (
+            <div>
+            <span>{items.rank}. </span>
+            <span>{items.orgName}</span>
+            <span> {items.bidAmount}</span>
+            </div>
+          ))}
+        </div> 
+        }
         </div>
       </div>
       </div>
@@ -169,30 +181,25 @@ class PackageCard extends Component {
           </span>
         </div> 
         }
-        {this.props.dataSource.status === 'Bidding' && 
-          <div className="bidding-section">
-            Bidders Rank:
-          {this.props.dataSource.bidders.map(items => (
-            <div>
-            <span>{items.rank}</span>
-            <span>{items.orgName}</span>
-            <span>{items.bidAmount}</span>
-            </div>
-          ))}
-        </div> 
-        }
+        
           {this.props.dataSource.status === 'For Deployment' && 
           <div className="deployment-section">
-            <p>Assigned to:</p>
-            <p>{this.props.dataSource.bidderAssigned}</p>
+            <div><span className="title">Assigned to: </span>
+            {this.props.dataSource.bidderAssigned}
+            </div>
+            <p></p>
           </div>
           }
           {this.props.dataSource.status === 'Accomplished' && 
           <div className="deployment-section">
-            <p>Assigned to:</p>
-            <p>{this.props.dataSource.bidderAssigned}</p>
-            <p>Accomplised Date:</p>
-            <p>{this.props.dataSource.accomplishDate}</p>
+            <div>
+              <span className="title">Assigned to: </span>
+              {this.props.dataSource.bidderAssigned}
+            </div>
+            <div>
+              <span className="title">Accomplised Date: </span>
+              {this.props.dataSource.accomplishDate}
+            </div>
           </div>
           }
         </div> 

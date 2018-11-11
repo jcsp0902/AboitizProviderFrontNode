@@ -6,7 +6,7 @@
   border: 2px solid #857373;
   border-radius: 10px;
   max-width: 300px;
-  min-height: 300px;
+  min-height: 360px;
   box-shadow: 2px 2px #B9A7A7;
   .package-header {
     border-top-right-radius: 7px;
@@ -64,6 +64,9 @@
 
 .package-body {
   margin: 15px;
+  margin-right: 0px;
+  max-height: 252px;
+  overflow: auto;
   .title{
     font-weight: bolder;
   }
@@ -83,10 +86,10 @@
     }
   }
   .details {
-    .items{
-    max-height: 84px;
-    overflow: auto; 
-    }
+    // .items{
+    // max-height: 84px;
+    // overflow: auto; 
+    // }
     .view-more-action {
       background: transparent;
       border: none;
@@ -103,6 +106,13 @@
 }
 
 .package-footer{
+  .title{
+    font-weight: bolder;
+  }
+  .deployment-section {
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
   .action-body{
     margin: 10px;
     .action {

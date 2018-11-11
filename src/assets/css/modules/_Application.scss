@@ -106,17 +106,36 @@
   overflow-y: auto;
 }
 .defaultAddress {
+  padding: 10px;
   overflow: auto;
   display: inline-block;
   margin: 10px;
   border: 1px solid #857373;
   border-radius: 10px;
   width: 320px;
-  min-height: 300px;
+  min-height: 339px;
   box-shadow: 2px 2px #B9A7A7;
+  .footer-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  .action-save{
+    margin-top: 10px;
+  }
+}
+  .ant-input {
+    border-radius: 10px;
+  }
+  .title{
+    font-weight: bolder;
+    margin: 5px;
+  }
   .anticon-plus-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 150px;
-    margin-top: 80px;
+    margin-top: 20%;
     color: #1890ff;
   }
   .address-header {
@@ -143,7 +162,7 @@
     border: 1px solid #857373;
     border-radius: 10px;
     width: 320px;
-    min-height: 300px;
+    min-height: 339px;
     box-shadow: 2px 2px #B9A7A7;
     .package-header {
       border-top-right-radius: 10px;

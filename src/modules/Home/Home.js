@@ -114,12 +114,20 @@ class Home extends Component {
         
         <div className="details">
           <span className="title">Package Details: </span> 
-          <div className="items">
+          <div className="items bid">
             {this.state.testData.details.map(items => (
               <div className="item">{items}</div>
             ))}
           </div>
           
+        {this.state.testData.status === 'Bidding' && 
+          <div className="bidding-section">
+            <span className="title bidders">Bidders Rank: </span>
+            <div>
+              No Bidders Yet
+            </div>
+        </div> 
+        }
         </div>
       </div>
       </div>
@@ -143,14 +151,6 @@ class Home extends Component {
               Decline
             </Button>
           </span>
-        </div> 
-        }
-        {this.state.testData.status === 'Bidding' && 
-          <div className="bidding-section">
-            Bidders Rank:
-            <div>
-              No Bidders Yet
-            </div>
         </div> 
         }
           {this.state.testData.status === 'For Deployment' && 

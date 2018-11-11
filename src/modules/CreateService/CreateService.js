@@ -96,12 +96,22 @@ class CreateService extends Component {
                     }
                      {this.state.createNew && 
                     <div className="defaultAddress" onClick={this.hidePlus}>
-                        Package Name: <Input id="name"/>
-                        Estimated Price: <Input id="price"/> 
-                        Package Detail: 
-                        <Input id="lights"/> Ligths 
-                        <Input id="outlet"/> Outlet
-                        <Button onClick={this.stateSave}>Save</Button>
+                    <div className="package-name">
+                        <span className="title">Package Name: </span> <Input id="name"/>
+                    </div>
+                    <div className="price">
+                        <span className="title">Estimated Price: </span><Input id="price"/> 
+                    </div>
+                    <div className="details">
+                        <div className="title">Package Details: </div>
+                        <span className="title">Lights:</span>
+                        <Input className="lights-input" id="lights"/>  
+                        <span className="title">Outlet:</span>
+                        <Input className="outlet-input" id="outlet"/>
+                    </div>
+                    <div className="footer-button">
+                        <Button className="action-save" type="primary" onClick={this.stateSave}>Save</Button>
+                    </div>
                     </div> 
 
                     }
