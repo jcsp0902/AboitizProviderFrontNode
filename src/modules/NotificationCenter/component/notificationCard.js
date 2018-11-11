@@ -72,7 +72,7 @@ class NotificationCard extends Component {
         }
         {this.props.dataSource.status === 'approved' &&
         <div>
-          <Button className={this.props.dataSource.status} disabled icon="check"/> <span>{this.props.dataSource.association} won the bidding for {this.props.dataSource.applicationNo}</span>
+          <Button className={this.props.dataSource.status} disabled icon="check"/> <span>You win the bidding for auction {this.props.dataSource.applicationNo}</span>
           <Button className="details-btn" onClick={this.showModal}> View Details </Button>
         </div>
         }
@@ -84,7 +84,7 @@ class NotificationCard extends Component {
         }
         {this.props.dataSource.status === 'rejected' &&
         <div>
-          <Button className={this.props.dataSource.status} disabled icon="close-circle"/> <span>{this.props.dataSource.customerName} cancel the {this.props.dataSource.applicationNo} has been rejected</span>
+          <Button className={this.props.dataSource.status} disabled icon="close-circle"/> <span>You did not make it for the auction {this.props.dataSource.applicationNo}</span>
           <Button className="details-btn" onClick={this.showModal}> View Details </Button>
         </div>
         }
@@ -100,7 +100,7 @@ class NotificationCard extends Component {
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
-          {this.props.dataSource.statut !== 'rejected' || 'pending' ? 
+          {this.props.dataSource.statut !== 'rejected' ? 
           <div>
           <h3>Application No. {this.props.dataSource.applicationNo}</h3>
           <h4>Customer Name. {this.props.dataSource.customerName}</h4>
